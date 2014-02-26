@@ -10,4 +10,8 @@ class PaginasController < ApplicationController
 
   def contato
   end
+
+  def enviar_contato
+
+  end
 end
