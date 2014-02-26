@@ -5,17 +5,17 @@
         <%= form_tag do %>
           <div class="form-group">
             <label>Nome:</label>
-            <input type="text" name="nome" class="form-control">
+            <input type="text" name="contato[nome]" class="form-control">
           </div>
 
           <div class="form-group">
             <label>Email:</label>
-            <input type="email" name="email" class="form-control">
+            <input type="email" name="contato[email]" class="form-control">
           </div>
 
           <div class="form-group">
             <label>Mensagem:</label>
-            <textarea name="mensagem" class="form-control" rows="4"></textarea>
+            <textarea name="contato[mensagem]" class="form-control" rows="4"></textarea>
           </div>
 
           <input type="submit" class="btn btn-primary pull-right" value="Enviar">
