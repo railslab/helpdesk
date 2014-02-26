@@ -12,12 +12,6 @@ class PaginasController < ApplicationController
   end
 
   def enviar_contato
-    contato = Contato.new
-
-    contato.nome = params[:contato][:nome]
-    contato.email = params[:contato][:email]
-    contato.mensagem = params[:contato][:mensagem]
-
-    contato.save
+    Contato.create params.require(:contato).permit!
   end
 end
