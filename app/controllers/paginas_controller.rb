@@ -11,6 +11,10 @@ class PaginasController < ApplicationController
   def contato
   end
 
+  def contatos
+    @contatos = Contato.all
+  end
+
   def enviar_contato
     Contato.create params.require(:contato).permit!
   end
