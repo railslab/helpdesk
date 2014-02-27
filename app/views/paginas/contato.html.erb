@@ -1,11 +1,16 @@
 <h1>Fale Conosco</h1>
 
 <% if @contato.errors.any? %>
-<pre class="alert alert-danger">
-  <% for message in @contato.errors.full_messages %>
-    <%= message %>
-  <% end %>
-</pre>
+    <div class="alert alert-danger">
+      <ul>
+        <% for name, message in @contato.errors %>
+            <li>
+              <strong><%= name %></strong>
+              <em><%= message %></em>
+            </li>
+        <% end %>
+      </ul>
+    </div>
 <% end %>
 
 <div class="row">
