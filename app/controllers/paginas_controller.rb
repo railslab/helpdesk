@@ -13,7 +13,7 @@ class PaginasController < ApplicationController
   end
 
   def contatos
-    @contatos = Contato.all
+    @contatos = Contato.all.reverse_order
   end
 
   def enviar_contato
