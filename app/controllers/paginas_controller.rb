@@ -19,7 +19,7 @@ class PaginasController < ApplicationController
   def enviar_contato
     @contato = Contato.create params.require(:contato).permit!
     if @contato.valid?
-      render :enviar_contato
+      redirect_to :contato_enviado
     else
       render :contato
     end

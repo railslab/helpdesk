@@ -5,6 +5,7 @@ HelpDesk::Application.routes.draw do
   get "contato" => 'paginas#contato'
   post "contato" => 'paginas#enviar_contato'
   get "contatos" => 'paginas#contatos'
+  get "contato_enviado" => 'paginas#contato_enviado'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
