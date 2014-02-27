@@ -26,7 +26,7 @@
             <%= text_area_tag 'contato[mensagem]', @contato.mensagem, class: 'form-control', rows: 4 %>
           </div>
 
-          <input type="submit" class="btn btn-primary pull-right" value="Enviar">
+          <%= submit_tag "Enviar", class: "btn btn-primary pull-right" %>
         <% end %>
     </div>
 
