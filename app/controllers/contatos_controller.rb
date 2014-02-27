@@ -1,4 +1,6 @@
 class ContatosController < ApplicationController
+  http_basic_authenticate_with name: "admin", password: "123", only: :index
+
   def index
     @contatos = Contato.all.reverse_order
   end
