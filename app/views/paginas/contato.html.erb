@@ -1,5 +1,13 @@
 <h1>Fale Conosco</h1>
 
+<% if @contato.errors.any? %>
+<pre class="alert alert-danger">
+  <% for message in @contato.errors.full_messages %>
+    <%= message %>
+  <% end %>
+</pre>
+<% end %>
+
 <div class="row">
     <div class="col-md-6">
         <%= form_tag do %>

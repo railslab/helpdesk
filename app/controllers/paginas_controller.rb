@@ -9,6 +9,7 @@ class PaginasController < ApplicationController
   end
 
   def contato
+    @contato = Contato.new
   end
 
   def contatos
@@ -16,6 +17,11 @@ class PaginasController < ApplicationController
   end
 
   def enviar_contato
-    Contato.create params.require(:contato).permit!
+    @contato = Contato.create params.require(:contato).permit!
+    if @contato.valid?
+      render :enviar_contato
+    else
+      render :contato
+    end
   end
 end
