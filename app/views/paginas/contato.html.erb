@@ -12,17 +12,17 @@
     <div class="col-md-6">
         <%= form_tag do %>
           <div class="form-group">
-            <label>Nome:</label>
+            <%= label_tag 'contato[nome]', 'Nome:' %>
             <%= text_field_tag 'contato[nome]', @contato.nome, class: 'form-control' %>
           </div>
 
           <div class="form-group">
-            <label>Email:</label>
+            <%= label_tag 'contato[email]', 'Email:' %>
             <%= email_field_tag 'contato[email]', @contato.email, class: 'form-control' %>
           </div>
 
           <div class="form-group">
-            <label>Mensagem:</label>
+            <%= label_tag 'contato[mensagem]', 'Mensagem:' %>
             <%= text_area_tag 'contato[mensagem]', @contato.mensagem, class: 'form-control', rows: 4 %>
           </div>
 
