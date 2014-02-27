@@ -2,35 +2,14 @@
   <div class="container-fluid">
 
     <div class="navbar-header">
-      <a class="navbar-brand" href="<%= root_path %>">
-        Help Desk
-      </a>
+      <%= link_to 'Help Desk', root_path, class: 'navbar-brand' %>
     </div>
 
     <ul class="nav navbar-nav">
-      <li>
-        <a href="<%= root_path %>">
-          Home
-        </a>
-      </li>
-
-      <li>
-        <a href="<%= recursos_path %>">
-          Recursos
-        </a>
-      </li>
-
-      <li>
-        <a href="<%= precos_path %>">
-          Preços
-        </a>
-      </li>
-
-      <li>
-        <a href="<%= contato_path %>">
-          Fale Conosco
-        </a>
-      </li>
+      <li><%= link_to 'Home', root_path %></li>
+      <li><%= link_to 'Recursos', recursos_path %></li>
+      <li><%= link_to 'Preços', precos_path %></li>
+      <li><%= link_to 'Fale Conosco', contato_path %></li>
     </ul><!-- .nav.navbar-nav -->
 
   </div><!-- .container-fluid -->
