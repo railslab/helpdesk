@@ -1,0 +1,44 @@
+<h1>Fale Conosco</h1>
+
+<% if @contato.errors.any? %>
+    <div class="alert alert-danger">
+      <ul>
+        <% for name, message in @contato.errors %>
+            <li>
+              <strong><%= name %></strong>
+              <em><%= message %></em>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
+<div class="row">
+  <div class="col-md-6">
+    <%= form_for @contato do |f| %>
+        <div class="form-group">
+          <%= f.label :nome %>
+          <%= f.text_field :nome, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :email %>
+          <%= f.email_field :email, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :mensagem %>
+          <%= f.text_area :mensagem, class: 'form-control', rows: 4 %>
+        </div>
+
+        <%= submit_tag "Enviar", class: "btn btn-primary pull-right" %>
+    <% end %>
+  </div>
+
+  <div class="col-md-6 col-xs-12 text-right well">
+    <h5>Entre em contato pelo formulário ao lado, ou pelo endereço abaixo:</h5>
+    <address>
+      R. Prof. Itamar Orlando Soares, 161
+    </address>
+  </div>
+</div><!-- .row -->
