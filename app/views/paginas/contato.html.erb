@@ -12,18 +12,18 @@
     <div class="col-md-6">
         <%= form_tag do %>
           <div class="form-group">
-            <%= label_tag 'contato[nome]', 'Nome:' %>
-            <%= text_field_tag 'contato[nome]', @contato.nome, class: 'form-control' %>
+            <%= label :contato, :nome %>
+            <%= text_field :contato, :nome, class: 'form-control' %>
           </div>
 
           <div class="form-group">
-            <%= label_tag 'contato[email]', 'Email:' %>
-            <%= email_field_tag 'contato[email]', @contato.email, class: 'form-control' %>
+            <%= label :contato, :email %>
+            <%= email_field :contato, :email, class: 'form-control' %>
           </div>
 
           <div class="form-group">
-            <%= label_tag 'contato[mensagem]', 'Mensagem:' %>
-            <%= text_area_tag 'contato[mensagem]', @contato.mensagem, class: 'form-control', rows: 4 %>
+            <%= label :contato, :mensagem %>
+            <%= text_area :contato, :mensagem, class: 'form-control', rows: 4 %>
           </div>
 
           <%= submit_tag "Enviar", class: "btn btn-primary pull-right" %>
@@ -34,7 +34,6 @@
       <h5>Entre em contato pelo formulário ao lado, ou pelo endereço abaixo:</h5>
       <address>
         R. Prof. Itamar Orlando Soares, 161
-
       </address>
     </div>
 </div><!-- .row -->
