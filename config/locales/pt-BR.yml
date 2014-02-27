@@ -1,4 +1,4 @@
-br:
+pt-BR:
   time:
     formats:
       default: "%d/%m/%Y %H:%M"
