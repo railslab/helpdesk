@@ -16,7 +16,7 @@
       <tr>
         <td><%= contato.id %></td>
         <td><%= contato.nome %></td>
-        <td><%= contato.email %></td>
+        <td><%= mail_to contato.email %></td>
         <td><%= contato.mensagem %></td>
         <td><%= l contato.created_at, format: :short %></td>
       </tr>
