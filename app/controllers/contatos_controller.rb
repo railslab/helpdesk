@@ -9,7 +9,7 @@ class ContatosController < ApplicationController
     @contato = Contato.new
   end
 
-  def view
+  def show
     @contato = Contato.find params[:id]
   end
 
