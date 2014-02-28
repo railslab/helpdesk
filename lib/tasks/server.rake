@@ -1,7 +1,7 @@
 namespace :server do
   desc "Para o servidor Rails"
   task stop: :environment do
-    sh %{kill -9 $(lsof -i :3000 -t)}
+    sh %{kill -INT $(cat tmp/pids/server.pid)}
   end
 
   desc "Reinicia o servidor Rails"
