@@ -9,6 +9,10 @@ class ContatosController < ApplicationController
     @contato = Contato.new
   end
 
+  def view
+    @contato = Contato.find params[:id]
+  end
+
   def create
     @contato = Contato.create params.require(:contato).permit!
     if @contato.valid?

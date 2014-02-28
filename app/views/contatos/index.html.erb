@@ -8,6 +8,7 @@
     <th>Email</th>
     <th>Mensagem</th>
     <th>Data</th>
+    <th></th>
   </tr>
   </thead>
 
@@ -19,6 +20,11 @@
         <td><%= mail_to contato.email %></td>
         <td><%= contato.mensagem %></td>
         <td><%= l contato.created_at, format: :short %></td>
+        <th>
+          <a class="btn btn-info btn-xs" href="/contatos/<%= contato.id %>">
+            abrir
+          </a>
+        </th>
       </tr>
   <% end %>
   </tbody>
