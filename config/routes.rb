@@ -6,7 +6,7 @@ HelpDesk::Application.routes.draw do
   post 'contatos' => 'contatos#create'
   get 'contatos'=> 'contatos#index'
   get 'contato_enviado' => 'contatos#enviado'
-  get 'contatos/:id' => 'contatos#view'
+  get 'contatos/:id' => 'contatos#view', as: :view_contato
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
