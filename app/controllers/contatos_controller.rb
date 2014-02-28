@@ -1,5 +1,5 @@
 class ContatosController < ApplicationController
-  http_basic_authenticate_with name: "admin", password: "123", only: :index
+  http_basic_authenticate_with name: "admin", password: "123", except: [:new, :create]
 
   def index
     @contatos = Contato.all.reverse_order
@@ -19,18 +19,17 @@ class ContatosController < ApplicationController
     @contato = Contato.find params[:id]
     @contato.lido = false
     @contato.save!
+    flash[:success] = 'Email marcado como não lido!'
     redirect_to contatos_path
   end
 
   def create
     @contato = Contato.create params.require(:contato).permit!
     if @contato.valid?
-      redirect_to :contato_enviado
+      flash[:success] = 'Email enviado com sucesso!'
+      redirect_to contatos_path
     else
       render :new
     end
-  end
-
-  def enviado
   end
 end
