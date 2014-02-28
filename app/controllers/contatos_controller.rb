@@ -15,6 +15,13 @@ class ContatosController < ApplicationController
     @contato.save!
   end
 
+  def unread
+    @contato = Contato.find params[:id]
+    @contato.lido = false
+    @contato.save!
+    redirect_to contatos_path
+  end
+
   def create
     @contato = Contato.create params.require(:contato).permit!
     if @contato.valid?
