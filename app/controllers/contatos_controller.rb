@@ -11,6 +11,8 @@ class ContatosController < ApplicationController
 
   def show
     @contato = Contato.find params[:id]
+    @contato.lido = true
+    @contato.save!
   end
 
   def create
