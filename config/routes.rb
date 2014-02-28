@@ -1,9 +1,9 @@
+# http://guides.rubyonrails.org/routing.html
 HelpDesk::Application.routes.draw do
   get 'recursos' => 'paginas#recurso'
   get 'precos'  => 'paginas#preco'
 
 =begin
-  get 'contato' => 'contatos#new'
   post 'contatos' => 'contatos#create'
   get 'contatos'=> 'contatos#index'
   get 'contato_enviado' => 'contatos#enviado'
@@ -16,6 +16,8 @@ HelpDesk::Application.routes.draw do
       patch 'unread'
     end
   end
+
+  get 'contato' => 'contatos#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
