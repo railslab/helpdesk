@@ -20,11 +20,7 @@
         <td><%= mail_to contato.email %></td>
         <td><%= contato.mensagem %></td>
         <td><%= l contato.created_at, format: :short %></td>
-        <th>
-          <a class="btn btn-info btn-xs" href="<%= view_contato_path contato %>">
-            abrir
-          </a>
-        </th>
+        <td><%= link_to 'abrir', view_contato_path(contato), class: 'btn btn-info btn-xs' %></td>
       </tr>
   <% end %>
   </tbody>
