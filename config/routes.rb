@@ -13,7 +13,7 @@ HelpDesk::Application.routes.draw do
 
   resources :contatos do
     member do
-      get 'unread'
+      patch 'unread'
     end
   end
 

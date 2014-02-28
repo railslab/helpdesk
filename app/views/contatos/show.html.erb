@@ -1,4 +1,4 @@
-<%= link_to 'marcar como não lido', [:unread, @contato], class: 'btn btn-warning pull-right' %>
+<%= link_to 'marcar como não lido', [:unread, @contato], class: 'btn btn-warning pull-right', method: :patch %>
 
 <h1>
   <%= @contato.nome %>
