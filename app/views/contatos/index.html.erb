@@ -14,7 +14,7 @@
 
   <tbody>
   <% for contato in @contatos %>
-      <tr>
+      <tr class="<%= 'text-muted' if contato.lido? %>">
         <td><%= contato.id %></td>
         <td><%= contato.nome %></td>
         <td><%= mail_to contato.email %></td>
