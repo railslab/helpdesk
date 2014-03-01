@@ -22,4 +22,8 @@
     = label :usuario, :senha
     = password_field :usuario, :senha, class: 'form-control'
 
+  %div.form-group
+    = label :usuario, :senha, 'Senha (repetir)'
+    = password_field :usuario, :senha_confirmation, class: 'form-control'
+
   = submit_tag 'Salvar', class: 'btn btn-success'
