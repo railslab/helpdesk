@@ -1,0 +1,16 @@
+%h1 Usuários
+
+%a.pull-right.btn.btn-primary(href=new_usuario_path) Novo
+
+%table.table
+  %thead
+    %tr
+      %th id
+      %th Nome
+      %th email
+  %tbody
+  - for usuario in @usuarios
+    %tr
+      %td= usuario.id
+      %td= usuario.nome
+      %td= usuario.email
