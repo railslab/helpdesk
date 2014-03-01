@@ -11,6 +11,7 @@
       %th senha
       %th alterado
       %th criado
+      %th editar
   %tbody
   - for usuario in @usuarios
     %tr
@@ -20,3 +21,4 @@
       %td= usuario.password_digest
       %td= l usuario.updated_at
       %td= l usuario.created_at
+      %th= link_to 'editar', [:edit, usuario], class:'btn btn-info btn-xs'

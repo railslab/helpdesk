@@ -1,29 +1,3 @@
 %h1 Novo Usuário
 
-- if @usuario.errors.any?
-  %div.alert.alert-danger
-    %ul
-    - for name, message in @usuario.errors
-      %li
-        %strong= t name
-        %em= message
-
-= form_for @usuario do
-
-  %div.form-group
-    = label :usuario, :nome
-    = text_field :usuario, :nome, class: 'form-control'
-
-  %div.form-group
-    = label :usuario, :email
-    = text_field :usuario, :email, class: 'form-control'
-
-  %div.form-group
-    = label :usuario, :password, 'Senha'
-    = password_field :usuario, :password, class: 'form-control'
-
-  %div.form-group
-    = label :usuario, :password_confirmation, 'Senha (Confirmação)'
-    = password_field :usuario, :password_confirmation, class: 'form-control'
-
-  = submit_tag 'Salvar', class: 'btn btn-success'
+= render 'form'
