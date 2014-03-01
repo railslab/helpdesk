@@ -1,5 +1,7 @@
 # http://guides.rubyonrails.org/routing.html
 HelpDesk::Application.routes.draw do
+  resources :usuarios
+
   get 'recursos' => 'paginas#recurso'
   get 'precos'  => 'paginas#preco'
 

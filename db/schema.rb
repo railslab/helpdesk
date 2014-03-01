@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140228072739) do
+ActiveRecord::Schema.define(version: 20140301014717) do
 
   create_table "contatos", force: true do |t|
     t.string   "nome"
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 20140228072739) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "lido"
+  end
+
+  create_table "usuarios", force: true do |t|
+    t.string   "nome"
+    t.string   "email"
+    t.string   "senha"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
