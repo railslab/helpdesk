@@ -5,7 +5,7 @@
     %ul
     - for name, message in @usuario.errors
       %li
-        %strong= name
+        %strong= t name
         %em= message
 
 = form_for @usuario do
@@ -23,7 +23,7 @@
     = password_field :usuario, :senha, class: 'form-control'
 
   %div.form-group
-    = label :usuario, :senha, 'Senha (repetir)'
+    = label :usuario, :senha, 'Senha (Confirmação)'
     = password_field :usuario, :senha_confirmation, class: 'form-control'
 
   = submit_tag 'Salvar', class: 'btn btn-success'
