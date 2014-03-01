@@ -1,5 +1,13 @@
 %h1 Novo Usuário
 
+- if @usuario.errors.any?
+  %div.alert.alert-danger
+    %ul
+    - for name, message in @usuario.errors
+      %li
+        %strong= name
+        %em= message
+
 = form_for @usuario do
 
   %div.form-group
