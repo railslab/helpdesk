@@ -8,7 +8,7 @@ class UsuariosController < ApplicationController
   end
 
   def create
-    @usuario = Usuario.create params.require(:usuario).permit(:nome, :email, :senha, :senha_confirmation)
+    @usuario = Usuario.create params.require(:usuario).permit(:nome, :email, :password, :password_confirmation)
     if @usuario.valid?
       redirect_to usuarios_path, notice: 'Usuário cadastrado com sucesso!'
     else

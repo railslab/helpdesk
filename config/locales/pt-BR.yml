@@ -1,5 +1,5 @@
 pt-BR:
-  senha_confirmation: Confirmação
+  password_confirmation: Confirmação
   time:
     formats:
       default: "%d/%m/%Y %H:%M"
