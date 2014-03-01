@@ -8,9 +8,13 @@
       %th id
       %th Nome
       %th email
+      %th alterado
+      %th criado
   %tbody
   - for usuario in @usuarios
     %tr
       %td= usuario.id
       %td= usuario.nome
       %td= usuario.email
+      %td= l usuario.updated_at
+      %td= l usuario.created_at
