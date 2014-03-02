@@ -38,6 +38,9 @@ end
 group :development do
   gem 'pry-rails'
   gem 'haml-rails'
+  gem 'meta_request'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 #Use ActiveModel has_secure_password
