@@ -12,5 +12,14 @@
       <li><%= link_to 'Fale Conosco', fale_conosco_path %></li>
     </ul><!-- .nav.navbar-nav -->
 
+    <ul class="navbar-nav nav navbar-right">
+      <% if user_signed_in? %>
+      <li class="navbar-text"><%= current_user.email %></li>
+      <li><%= link_to 'sair', session_path, method: :delete %></li>
+      <% else %>
+      <li><%= link_to 'Login', new_session_path %></li>
+      <% end %>
+    </ul>
+
   </div><!-- .container-fluid -->
 </nav>

@@ -1,0 +1,13 @@
+.row
+  .col-sm-6.col-sm-push-3
+    = form_tag session_path do
+
+      .form-group
+        = label_tag 'email'
+        = email_field_tag 'email', '', class: 'form-control'
+
+      .form-group
+        = label_tag 'senha'
+        = password_field_tag 'password', '', class: 'form-control'
+
+      = submit_tag 'Entrar', class: 'btn btn-success'
