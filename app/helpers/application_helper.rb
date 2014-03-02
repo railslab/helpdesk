@@ -1,9 +1,13 @@
 module ApplicationHelper
-  def user_signed_in?
+  def user_session
     session[:user_id]
   end
 
+  def user_signed_in?
+    !! user_session
+  end
+
   def current_user
-    Usuario.find session[:user_id]
+    Usuario.find user_session
   end
 end

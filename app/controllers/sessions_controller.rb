@@ -4,8 +4,14 @@ class SessionsController < ApplicationController
   end
 
   def create
-    session[:user_id] = 3
-    redirect_to root_path, notice: 'Bem Vindo!'
+    usuario = Usuario.find_by_email(params[:email])
+    if usuario && usuario.authenticate(params[:password])
+      session[:user_id] = usuario.id
+      redirect_to root_path, notice: 'Bem Vindo!'
+    else
+      flash.now.alert = "Email ou Senha inválida!"
+      render :new
+    end
   end
 
   def destroy
