@@ -1,4 +1,6 @@
 class UsuariosController < ApplicationController
+  proteger
+
   def new
     @usuario = Usuario.new
   end

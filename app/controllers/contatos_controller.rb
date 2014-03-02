@@ -1,5 +1,5 @@
 class ContatosController < ApplicationController
-  http_basic_authenticate_with name: "admin", password: "123", except: [:new, :create]
+  proteger except: [:new, :create]
 
   def index
     @contatos = Contato.all.reverse_order
