@@ -28,4 +28,9 @@ class UsuariosController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    Usuario.find(params[:id]).destroy
+    redirect_to usuarios_path, notice: 'Usuário excluído!'
+  end
 end
