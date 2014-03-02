@@ -10,6 +10,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to new_session_path, notice: 'Adeus!'
+    redirect_to login_path, notice: 'Adeus!'
   end
 end

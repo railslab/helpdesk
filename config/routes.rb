@@ -21,6 +21,9 @@ HelpDesk::Application.routes.draw do
 
   get 'contato' => 'contatos#new', as: :fale_conosco
 
+  get 'login' => 'sessions#new', as: :login
+  get 'logout' => 'sessions#destroy', as: :logout
+
   resource :session
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -15,9 +15,9 @@
     <ul class="navbar-nav nav navbar-right">
       <% if user_signed_in? %>
       <li class="navbar-text"><%= current_user.email %></li>
-      <li><%= link_to 'sair', session_path, method: :delete %></li>
+      <li><%= link_to 'sair', logout_path %></li>
       <% else %>
-      <li><%= link_to 'Login', new_session_path %></li>
+      <li><%= link_to 'Login', login_path %></li>
       <% end %>
     </ul>
 
