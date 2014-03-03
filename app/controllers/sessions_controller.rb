@@ -4,8 +4,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    usuario = Usuario.find_by_email(params[:email])
-    if usuario && usuario.authenticate(params[:password])
+    usuario = Usuario.find_by_authentication params[:email], params[:password]
+    if usuario
       session[:user_id] = usuario.id
       redirect_to root_path, notice: 'Bem Vindo!'
     else
