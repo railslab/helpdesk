@@ -1,5 +1,5 @@
 class ContatosController < ApplicationController
-  proteger except: [:new, :create]
+  # proteger except: [:new, :create]
 
   def index
     @contatos = Contato.all.reverse_order

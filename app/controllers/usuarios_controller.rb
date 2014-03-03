@@ -1,5 +1,5 @@
 class UsuariosController < ApplicationController
-  proteger
+  # proteger
 
   def new
     @usuario = Usuario.new
