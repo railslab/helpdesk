@@ -39,6 +39,7 @@ end
 group :development do
   gem 'pry-rails'
   gem 'haml-rails'
+  gem 'slim-rails'
   gem 'meta_request'
   gem 'better_errors'
   gem 'binding_of_caller'
