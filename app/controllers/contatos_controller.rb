@@ -7,6 +7,11 @@ class ContatosController < ApplicationController
 
   def new
     @contato = Contato.new
+    if Rails.env.development?
+      @contato.nome = Faker::Name.name
+      @contato.email = Faker::Internet.email
+      @contato.mensagem = Faker::Lorem.paragraph
+    end
   end
 
   def show
